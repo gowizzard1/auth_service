@@ -4,12 +4,13 @@ import jwt
 import datetime
 import json
 from functools import wraps
+from sqlalchemy import create_engine
 app=Bottle()
 
 
 #connect to a local database
 
-from sqlalchemy import create_engine
+
 db = create_engine('postgresql://postgres@localhost:5432/auth')
 connection = db.connect()
 
